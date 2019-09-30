@@ -12,6 +12,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: |
-      docker build . --file Dockerfile --tag tayko/cwb110-project:latest
-      docker login -u $DOCKER_USER -p $DOCKER_PASS
-      docker push tayko/cwb110-project:latest
+        docker build . --file Dockerfile --tag tayko/cwb110-project:latest
+        docker login -u $DOCKER_USER -p $DOCKER_PASS
+        docker push tayko/cwb110-project:latest
