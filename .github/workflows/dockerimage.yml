@@ -18,7 +18,7 @@ jobs:
     - name: Build the Container image
       uses: actions/docker/cli@master
       with:
-        args: build -t tayko/cb110-project:$(echo $GITHUB_SHA | head -c7) .
+        args: build -t tayko/cwb110-project:$(echo $GITHUB_SHA | head -c7) .
         
     - name: Docker Login
       uses: actions/docker/login@master
@@ -29,7 +29,7 @@ jobs:
     - name: Push docker image
       uses: actions/docker/cli@master
       with:
-        args: push tayko/cwb110-project:$(echo $GITHUB_SHA | head -c7)
+        args: push tayko/cwb110-project
         
     - name: Update kubernetes deployment file
       run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|tayko/cwb110-project:'${TAG}'|' $GITHUB_WORKSPACE/kubernetes/deployment-apache-cwb110.yml
