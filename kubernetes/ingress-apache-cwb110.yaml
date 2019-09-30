@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cwb110-project-ingress
+  labels:
+    app: apache-cwb110
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+    - host: cwb110.tayko.co
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: cwb110-project-service
+              servicePort: 80
