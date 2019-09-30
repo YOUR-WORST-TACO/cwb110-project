@@ -32,7 +32,7 @@ jobs:
         args: push tayko/cwb110-project
         
     - name: Update kubernetes deployment file
-      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|tayko/cwb110-project:'${TAG}'|' $GITHUB_WORKSPACE/kubernetes/deployment-apache-cwb110.yml
+      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|tayko/cwb110-project:'${TAG}'|' $GITHUB_WORKSPACE/kubernetes/deployment-apache-cwb110.yaml
       
     - name: Pull DigitalOcean kubeconfig
       uses: digitalocean/action-doctl@master
