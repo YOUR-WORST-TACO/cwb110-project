@@ -1,20 +1,55 @@
 name: Docker Image CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
 
   build:
- 
+    name: Build, push, deploy cwb110-project
     runs-on: ubuntu-latest
  
     steps:
-    - uses: actions/checkout@v1
-    - name: Build the Docker image
+    - name: Checkout master
+      uses: actions/checkout@master
+      
+    - name: Update SHA
+      run: echo $GITHUB_SHA > $GITHUB_WORKSPACE/site/_meta
+      
+    - name: Build the Container image
+      uses: actions/docker/cli@master
+      with:
+        args: build -t tayko/cb110-project:$(echo $GITHUB_SHA | head -c7) .
+        
+    - name: Docker Login
+      uses: actions/docker/login@master
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASS }}
-      run: |
-        docker build . --file Dockerfile --tag tayko/cwb110-project:latest
-        docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-        docker push tayko/cwb110-project:latest
+        
+    - name: Push docker image
+      uses: actions/docker/cli@master
+      with:
+        args: push tayko/cwb110-project
+        
+    - name: Update kubernetes deployment file
+      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|tayko/cwb110-project:'${TAG}'|' $GITHUB_WORKSPACE/kubernetes/deployment-apache-cwb110.yml
+      
+    - name: Pull DigitalOcean kubeconfig
+      uses: digitalocean/action-doctl@master
+      env:
+        DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      with:
+        args: kubernetes cluster kubeconfig show cerberus > $GITHUB_WORKSPACE/.kubeconfig
+        
+    - name: Deploy updated deployment to DigitalOcean
+      uses: docker://lachlanevenson/k8s-kubectl
+      with:
+        args: --kubeconfig=/github/workspace/.kubeconfig apply -f /github/workspace/config/deployment.yml
+        
+    - name: Verify cwb110 deployment
+      uses: docker://lachlanevenson/k8s-kubectl
+      with:
+        args: --kubeconfig=/github/workspace/.kubeconfig rollout status deployment/static-example
