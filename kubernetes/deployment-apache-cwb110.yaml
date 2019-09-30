@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cwb110-project-site
-        image: tayko/cwb110-project
+        image: <IMAGE>
         imagePullPolicy: Always
         ports:
         - name: http
