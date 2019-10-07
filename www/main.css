@@ -1,0 +1,150 @@
+/* GLOBAL STYLES */
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header.primary {
+    padding-top: 30px;
+    height: 120px;
+}
+
+header.primary > img {
+    
+    height: 120px;
+}
+
+p {
+    font-size: 21px;
+}
+
+footer {
+    background-color: #AED2D3;
+    text-align: center;
+    line-height: 80px;
+    padding: 0;
+    height: 80px;
+}
+
+footer > p {
+    margin: 0;
+}
+
+.nav-links {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-links > li {
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    
+}
+
+.nav-links > li > a {
+    color: #2B3738;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding-bottom: 0.25em;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    font-size: 20px;
+}
+
+.nav-links > li > a:hover {
+    text-decoration: none;
+    
+    background-color: #EDF5F5;
+    padding-bottom: 0.25em;
+}
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.colored-line {
+    width: 100%;
+    height: 10px;
+}
+
+.line-color1, .line-color2, .line-color3, .line-color4, .line-color5 {
+    float: left;
+    height: 100%;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.line-color1 {
+    background-color: #C0DCDD;
+}
+
+.line-color2 {
+    background-color: #AED2D3;
+}
+
+.line-color3 {
+    background-color: #9CC8CA;
+}
+
+.line-color4 {
+    background-color: #8EB6B8;
+}
+
+.line-color5 {
+    background-color: #80A4A6;
+}
+
+.row {
+    display: flex
+}
+
+.content-left {
+    flex: 70%;
+    padding-right: 5px;
+    border-right: 2px solid #C0DCDD;
+}
+
+.content-right {
+    flex: 30%;
+    padding-left: 10px;
+}
+
+/* ABOUT US */
+
+.commitment-list {
+    font-size: 21px;
+}
+
+.announcements > p {
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .row {
+        display: block;
+    }
+    .content-left {
+        border-right: none;
+    }
+}
