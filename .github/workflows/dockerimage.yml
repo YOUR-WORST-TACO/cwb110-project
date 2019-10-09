@@ -16,20 +16,16 @@ jobs:
       uses: actions/checkout@master
       
     - name: Build the Container image
-      uses: actions/docker/cli@master
-      with:
-        args: build -t tayko/cwb110-project:$(echo $GITHUB_SHA | head -c7) .
+      run: docker build -t tayko/cwb110-project:$(echo $GITHUB_SHA | head -c7) .
         
     - name: Docker Login
-      uses: actions/docker/login@master
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASS }}
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         
     - name: Push docker image
-      uses: actions/docker/cli@master
-      with:
-        args: push tayko/cwb110-project
+      run: docker push tayko/cwb110-project
         
     - name: Update kubernetes deployment file
       run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|tayko/cwb110-project:'${TAG}'|' $GITHUB_WORKSPACE/kubernetes/deployment-apache-cwb110.yaml
