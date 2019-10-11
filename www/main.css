@@ -10,6 +10,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main {
+    padding: 0 10px;
+}
+
 header.primary {
     padding-top: 30px;
     height: 120px;
@@ -54,7 +58,6 @@ footer > p {
     color: #2B3738;
     text-decoration: none;
     display: block;
-
     padding: 5px 10px;
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
@@ -63,7 +66,6 @@ footer > p {
 
 .nav-links > li > a:hover {
     text-decoration: none;
-    
     background-color: #EDF5F5;
 }
 
@@ -134,9 +136,6 @@ footer > p {
 @media screen and (max-width: 900px) {
     .wrapper {
         width: 100%;
-    }
-    main {
-        padding: 0 10px;
     }
 }
 
