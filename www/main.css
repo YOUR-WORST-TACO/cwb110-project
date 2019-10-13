@@ -79,6 +79,14 @@ footer > p {
     height: 10px;
 }
 
+.drop-caps:first-letter {
+    float: left;
+    padding-top: 10px;
+    padding-right: 5px;
+    font-size: 4em;
+    line-height: 4em;
+}
+
 .line-color1, .line-color2, .line-color3, .line-color4, .line-color5 {
     float: left;
     height: 100%;
