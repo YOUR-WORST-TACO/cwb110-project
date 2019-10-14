@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    padding: 0 10px;
+    padding: 20px 10px;
 }
 
 header.primary {
@@ -25,6 +25,7 @@ header.primary > img {
 }
 
 p {
+    line-height: 1.3em;
     font-size: 21px;
 }
 
@@ -37,7 +38,8 @@ footer {
 }
 
 footer > p {
-    margin: 0;
+    margin: auto;
+    line-height: 80px;
 }
 
 .nav-links {
@@ -81,10 +83,10 @@ footer > p {
 
 .drop-caps:first-letter {
     float: left;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-right: 5px;
     font-size: 4em;
-    line-height: 4em;
+    line-height: 0.9em;
 }
 
 .line-color1, .line-color2, .line-color3, .line-color4, .line-color5 {
@@ -139,6 +141,108 @@ footer > p {
     font-size: 18px;
 }
 
+.innovation-section {
+    padding-bottom: 80px;
+}
+
+.innovation-section > h1 {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+
+.innovation-section > p {
+    max-width: 600px;
+    margin: auto;
+}
+
+.innovation-section > div {
+    text-align: center;
+}
+
+.innovation-section > div > a {
+    margin-top: 20px;
+    background-color: #aacbc5;
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.innovation-section > div > a:hover {
+    text-decoration: none;
+    background-color: #EDF5F5;
+}
+
+.product-show {
+    min-height: 300px;
+    text-align: center;
+    padding: 30px;
+    background-color: #C0DCDD;
+}
+
+.product-dark {
+    background-color: #3f7676;
+    color: #fff;
+}
+
+.product-show > img {
+    height: 300px;
+}
+
+.product-show > h1 {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.product-show > h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.product-show > div {
+    padding-top: 10px;
+}
+
+.product-show > div > a {
+    background-color: #aacbc5;
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.product-show > div > a:hover {
+    text-decoration: none;
+    background-color: #EDF5F5;
+}
+
+.product-dark > div > a {
+    background-color: #88d7d5;
+}
+
+.product-dark > div > a:hover {
+
+}
+
+.product-show::after {
+    clear:both;
+}
+
+.image-center {
+    width: 100%;
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 900px) {
@@ -153,5 +257,12 @@ footer > p {
     }
     .content-left {
         border-right: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-show > img {
+        height: auto;
+        width: 100%;
     }
 }
