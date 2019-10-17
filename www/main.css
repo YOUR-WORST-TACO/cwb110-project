@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    padding: 20px 10px;
+    /*padding: 20px 10px;*/
 }
 
 header.primary {
@@ -145,14 +145,14 @@ footer > p {
     padding-bottom: 80px;
 }
 
-.innovation-section > h1 {
+.innovation-section h1 {
     font-size: 40px;
     font-weight: normal;
     margin: 0;
     text-align: center;
 }
 
-.innovation-section > p {
+.innovation-section p {
     max-width: 600px;
     margin: auto;
 }
@@ -161,7 +161,7 @@ footer > p {
     text-align: center;
 }
 
-.innovation-section > div > a {
+.innovation-section div > a {
     margin-top: 20px;
     background-color: #aacbc5;
     color: #000000;
@@ -174,7 +174,7 @@ footer > p {
     border-radius: 5px;
 }
 
-.innovation-section > div > a:hover {
+.innovation-section div > a:hover {
     text-decoration: none;
     background-color: #EDF5F5;
 }
@@ -249,6 +249,10 @@ footer > p {
     .wrapper {
         width: 100%;
     }
+
+    .media-pad {
+        padding: 0 20px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -257,6 +261,9 @@ footer > p {
     }
     .content-left {
         border-right: none;
+    }
+    .content-right {
+        padding-left: 0;
     }
 }
 
