@@ -1,4 +1,9 @@
-/* GLOBAL STYLES */
+/*
+########################################
+GLOBAL STYLES
+    general theme and layouts (Not including class selectors)
+########################################
+*/
 
 body, html {
     margin: 0;
@@ -8,20 +13,6 @@ body, html {
 body {
     background-color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-main {
-    /*padding: 20px 10px;*/
-}
-
-header.primary {
-    padding-top: 30px;
-    height: 120px;
-}
-
-header.primary > img {
-    
-    height: 120px;
 }
 
 p {
@@ -42,6 +33,48 @@ footer > p {
     line-height: 80px;
 }
 
+/*
+########################################
+GLOBAL STYLES - class selectors
+    All misc class selectors
+########################################
+*/
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.drop-caps:first-letter {
+    float: left;
+    padding-top: 5px;
+    padding-right: 5px;
+    font-size: 4em;
+    line-height: 0.9em;
+}
+
+.row {
+    display: flex
+}
+
+.content-left {
+    flex: 70%;
+    padding-right: 5px;
+    border-right: 2px solid #C0DCDD;
+}
+
+.content-right {
+    flex: 30%;
+    padding-left: 10px;
+}
+
+/*
+########################################
+NAVBAR - Navigation styles
+    Configures appearance of navbar
+    including buttons and links
+########################################
+*/
 .nav-links {
     padding: 0;
     display: flex;
@@ -71,22 +104,15 @@ footer > p {
     background-color: #EDF5F5;
 }
 
-.wrapper {
-    width: 900px;
-    margin: 0 auto;
-}
-
+/*
+########################################
+NAVBAR - Line Decoration
+    A decorative Navbar element
+########################################
+*/
 .colored-line {
     width: 100%;
     height: 10px;
-}
-
-.drop-caps:first-letter {
-    float: left;
-    padding-top: 5px;
-    padding-right: 5px;
-    font-size: 4em;
-    line-height: 0.9em;
 }
 
 .line-color1, .line-color2, .line-color3, .line-color4, .line-color5 {
@@ -116,22 +142,20 @@ footer > p {
     background-color: #80A4A6;
 }
 
-.row {
-    display: flex
+/*
+########################################
+-- PAGE -- ABOUT US
+    about page with standard content describing the company
+########################################
+*/
+header.primary {
+    padding-top: 30px;
+    height: 120px;
 }
 
-.content-left {
-    flex: 70%;
-    padding-right: 5px;
-    border-right: 2px solid #C0DCDD;
+header.primary > img {
+    height: 120px;
 }
-
-.content-right {
-    flex: 30%;
-    padding-left: 10px;
-}
-
-/* ABOUT US */
 
 .commitment-list {
     font-size: 21px;
@@ -141,6 +165,12 @@ footer > p {
     font-size: 18px;
 }
 
+/*
+########################################
+INNOVATION SECTION
+    This section is dedicated to the Face graphic on the index page
+########################################
+*/
 .innovation-section {
     padding-bottom: 80px;
 }
@@ -179,6 +209,12 @@ footer > p {
     background-color: #EDF5F5;
 }
 
+/*
+########################################
+PRODUCT SHOW
+    selectors that handle displaying products on front page
+########################################
+*/
 .product-show {
     min-height: 300px;
     text-align: center;
@@ -186,6 +222,7 @@ footer > p {
     background-color: #C0DCDD;
 }
 
+/* an alternate background color */
 .product-dark {
     background-color: #3f7676;
     color: #fff;
@@ -227,6 +264,7 @@ footer > p {
     background-color: #EDF5F5;
 }
 
+/* alternate background for button */
 .product-dark > div > a {
     background-color: #88d7d5;
 }
@@ -243,8 +281,14 @@ footer > p {
     width: 100%;
 }
 
-/* RESPONSIVE */
 
+/*
+########################################
+RESPONSIVE selectors
+    configures different media queries
+    to handle page management
+########################################
+*/
 @media screen and (max-width: 900px) {
     .wrapper {
         width: 100%;
