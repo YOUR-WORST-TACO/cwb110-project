@@ -68,6 +68,12 @@ GLOBAL STYLES - class selectors
     padding-left: 10px;
 }
 
+.small-aside {
+    margin: 0;
+    padding: 0;
+    font-size: 0.6em;
+}
+
 /*
 ########################################
 NAVBAR - Navigation styles
@@ -163,6 +169,18 @@ header.primary > img {
 
 .announcements > p {
     font-size: 18px;
+}
+
+/*
+########################################
+-- PAGE -- DONATE
+    a page to get free money
+########################################
+*/
+.donation-link {
+    width: 256px;
+    margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 /*
