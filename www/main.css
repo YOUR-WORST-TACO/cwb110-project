@@ -75,6 +75,35 @@ GLOBAL STYLES - class selectors
 
 /*
 ########################################
+ACCESSIBILITY - Skip to Content
+    Configures the skip to content
+    button to provide faster access
+    to page content.
+########################################
+*/
+
+a.accessibility-skip {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 1px;
+    height: 1px;
+    text-align: left;
+    overflow: hidden;
+}
+
+a.accessibility-skip:active,
+a.accessibility-skip:focus,
+a.accessibility-skip:hover {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+/*
+########################################
 NAVBAR - Navigation styles
     Configures appearance of navbar
     including buttons and links
