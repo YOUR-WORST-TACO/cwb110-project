@@ -12,6 +12,7 @@ body, html {
 body {
     background-color: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 p {
@@ -213,6 +214,36 @@ header.primary > img {
 
 /*
 ########################################
+-- PAGE -- CONTACT
+    a page for us to ignore you
+########################################
+*/
+.contact {
+    padding-top: 30px;
+}
+
+.contact-phone {
+    width: 1200px;
+    position: absolute;
+    left: calc( -1000px + (100vw - 900px)/2);
+}
+
+.contact-section {
+    padding-top: 30px;
+    padding-left: 170px;
+}
+
+.contact-list {
+    list-style: none;
+    font-size: 20px;
+}
+
+.contact-list > li {
+    padding-bottom: 10px;
+}
+
+/*
+########################################
 INNOVATION SECTION
     This section is dedicated to the Face graphic on the index page
 ########################################
@@ -320,7 +351,7 @@ PRODUCT SHOW
 }
 
 .product-show::after {
-    clear:both;
+    clear: both;
 }
 
 .image-center {
@@ -340,6 +371,14 @@ RESPONSIVE selectors
         width: 100%;
     }
 
+    .contact-phone {
+        display: none;
+    }
+
+    .contact-section {
+        padding-left: 0;
+    }
+
     .media-pad {
         padding: 0 20px;
     }
@@ -349,9 +388,11 @@ RESPONSIVE selectors
     .row {
         display: block;
     }
+
     .content-left {
         border-right: none;
     }
+
     .content-right {
         padding-left: 0;
     }
