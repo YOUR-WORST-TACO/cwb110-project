@@ -292,6 +292,7 @@ header.primary > img {
 
 .complaints-form textarea {
     resize: vertical;
+    margin-bottom: 20px;
 }
 
 .complaints-form input[type=submit],

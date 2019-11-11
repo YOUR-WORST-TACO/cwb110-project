@@ -5,9 +5,9 @@
 </head>
 <body>
 <hl >The form information received is given below:</h l >";
-$message = ";
+$message = "";
 foreach ($_pOST as $key=> $value){
-$message.= $key . " : " . $value . "<br>\r\n";
+$message.= $key." : ".$value."<br>\r\n";
 
 print $message; print "<hr>
 <hr>
