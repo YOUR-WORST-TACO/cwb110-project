@@ -5,7 +5,7 @@
 </head>
 <body>
 <hl>The form information received is given below:</hl>
-<table>
+<table border=\"1\">
 <tr>
 <th>Key</th>
 <th>Value</th>
