@@ -218,6 +218,31 @@ header.primary > img {
     padding-bottom: 50px;
 }
 
+.donate-table {
+    width: 100%;
+}
+
+.donate-table th, .donate-table td {
+    height: 30px;
+}
+
+.donate-table td {
+    background-color: #f67555;
+}
+
+.donate-table td.yes {
+    background-color: #86ff80;
+}
+
+.donate-table th:not(:first-of-type) {
+    background-color: #C0DCDD;
+}
+
+.donate-table td:first-of-type {
+    background-color: #C0DCDD;
+}
+
+
 /*
 ########################################
 -- PAGE -- CONTACT
@@ -303,6 +328,14 @@ header.primary > img {
     border: none;
     color: #fff;
     font-size: 18px;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.complaints-form input[type=submit]:hover,
+.complaints-form input[type=button]:hover {
+    background-color: #539191;
 }
 
 /*
