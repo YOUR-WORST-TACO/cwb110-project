@@ -14,7 +14,7 @@ $message = "";
 foreach ($_POST as $key=> $value){
 $message.= "<tr><td>".$key."</td><td>".$value."</td></tr>\r\n";
 }
-$message.= "</table>"
+$message.= "</table>";
 print $message;
 print "<hr>
 <br>
