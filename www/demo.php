@@ -4,10 +4,15 @@
 <title>Form Confirmation Page</title>
 </head>
 <body>
-<hl>The form information received is given below:</hl>";
+<hl>The form information received is given below:</hl>
+<table>
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>";
 $message = "";
 foreach ($_POST as $key=> $value){
-$message.= $key." : ".$value."<br>\r\n";
+$message.= "<tr><td>".$key."</td><td>".$value."</td></tr>\r\n";
 }
 print $message;
 print "<hr>
