@@ -74,6 +74,12 @@ GLOBAL STYLES - class selectors
     font-size: 0.6em;
 }
 
+.required-label::after {
+    content: " *";
+    color: #ff1e00;
+    font-weight: bold;
+}
+
 /*
 ########################################
 ACCESSIBILITY - Skip to Content
@@ -244,6 +250,62 @@ header.primary > img {
 
 /*
 ########################################
+-- PAGE -- COMPLAINTS
+    a page for snitches and other complainers
+########################################
+*/
+
+.complaints-form {
+    margin-top: 50px;
+    width: 400px;
+}
+
+.complaints-form label {
+    font-weight: bold;
+    display: block;
+    font-size: 19px;
+}
+
+.complaints-form input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.complaints-form input[type="checkbox"] {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.complaints-form p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.complaints-form input[type=text],
+.complaints-form input[type=email],
+.complaints-form textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+}
+
+.complaints-form textarea {
+    resize: vertical;
+}
+
+.complaints-form input[type=submit],
+.complaints-form input[type=button] {
+    margin-top: 20px;
+    background-color: #3f7676;
+    padding: 10px 30px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/*
+########################################
 INNOVATION SECTION
     This section is dedicated to the Face graphic on the index page
 ########################################
@@ -401,6 +463,12 @@ RESPONSIVE selectors
 @media screen and (max-width: 600px) {
     .product-show > img {
         height: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .complaints-form {
         width: 100%;
     }
 }
