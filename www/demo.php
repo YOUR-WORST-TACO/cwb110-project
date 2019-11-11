@@ -6,14 +6,15 @@
 <body>
 <hl>The form information received is given below:</hl>
 <table>
-    <tr>
-        <th>Key</th>
-        <th>Value</th>
-    </tr>";
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>";
 $message = "";
 foreach ($_POST as $key=> $value){
 $message.= "<tr><td>".$key."</td><td>".$value."</td></tr>\r\n";
 }
+$message.= "</table>"
 print $message;
 print "<hr>
 <br>
