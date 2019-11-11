@@ -6,7 +6,7 @@
 <body>
 <hl>The form information received is given below:</hl>";
 $message = "";
-foreach ($_pOST as $key=> $value){
+foreach ($_POST as $key=> $value){
 $message.= $key." : ".$value."<br>\r\n";
 }
 print $message;
