@@ -218,6 +218,10 @@ header.primary > img {
     padding-bottom: 50px;
 }
 
+.donation-video {
+    width: 100%;
+}
+
 .donate-table {
     width: 100%;
 }
