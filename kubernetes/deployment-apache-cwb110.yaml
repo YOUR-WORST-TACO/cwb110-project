@@ -6,6 +6,7 @@ metadata:
     app: apache-cwb110
 spec:
   replicas: 3
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: apache-cwb110
