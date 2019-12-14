@@ -342,6 +342,26 @@ header.primary > img {
     background-color: #539191;
 }
 
+.complaints-snitch-button {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.complaints-snitch-button:hover {
+    color: darkred;
+}
+
+.complaints-snitch-contract {
+    display: none;
+}
+
+.complaints-snitch-contract p {
+    padding-top: 10px;
+    padding-left: 10px;
+    border-left: #3f7676 2px solid;
+}
+
 /*
 ########################################
 INNOVATION SECTION
