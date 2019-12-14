@@ -23,14 +23,24 @@ p {
 footer {
     background-color: #AED2D3;
     text-align: center;
-    line-height: 80px;
+    line-height: 40px;
     padding: 0;
-    height: 80px;
+    height: 140px;
 }
 
 footer > p {
     margin: auto;
     line-height: 80px;
+}
+
+footer a {
+    margin: auto;
+    line-height: 40px;
+}
+
+footer .last-edited {
+    line-height: 20px;
+    font-size: 16px;
 }
 
 /*
