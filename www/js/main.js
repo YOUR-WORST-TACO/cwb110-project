@@ -7,4 +7,7 @@ $( document ).ready(function() {
             $(this).removeAttr('tabindex');
         }).focus();
     });
+
+    // Replace copyright span contents with the current Year
+    $(".copyright-date").html(new Date().getFullYear());
 });
